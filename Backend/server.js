@@ -2,7 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
-import authRoutes from "./src/Routes/auth_routes";
+import authRoutes from "./src/Routes/auth_routes.js";
+import recordRoutes from "./src/Routes/finance_record_routes.js"
 
 
 dotenv.config(); // Load env variables
@@ -19,7 +20,8 @@ app.use(cors());
 
 //Auth routes 
 app.use("/api/auth", authRoutes);
-
+//Record routes
+app.use("/api/records", recordRoutes);
 
 // MongoDB connection
 const connectDB = async () => {
