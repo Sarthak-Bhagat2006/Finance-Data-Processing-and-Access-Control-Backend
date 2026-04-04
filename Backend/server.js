@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
+import authRoutes from "./src/Routes/auth_routes";
 
 
 dotenv.config(); // Load env variables
@@ -12,9 +13,13 @@ app.use(express.json());
 app.use(cors());
 
 // Test route
-app.get("/", (req, res) => {
-    res.send("API is running...");
-});
+// app.get("/", (req, res) => {
+//     res.send("API is running...");
+// });
+
+//Auth routes 
+app.use("/api/auth", authRoutes);
+
 
 // MongoDB connection
 const connectDB = async () => {
