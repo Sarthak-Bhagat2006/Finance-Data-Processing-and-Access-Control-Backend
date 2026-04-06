@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { FinanceRecord } from "../Models/finance_record";
+import { FinanceRecord } from "../Models/finance_record.js";
 
 
 //summary

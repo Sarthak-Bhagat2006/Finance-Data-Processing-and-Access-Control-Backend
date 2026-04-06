@@ -50,6 +50,7 @@ export const registerUser = async (req, res) => {
 
 //Login controller 
 export const loginUser = async (req, res) => {
+    console.log("LOGIN HIT");
     try {
         const { email, password } = req.body;
 
